@@ -1,0 +1,47 @@
+public class Bank {
+     
+    public static void main(String[] args)
+    {
+        HDFCBank hdfc = new HDFCBank();
+        System.out.println(hdfc.rateOfInterest());
+        SBIBank sbi = new SBIBank();
+        System.out.println(sbi.rateOfInterest());
+         PNBBank pnb = new PNBBank();
+         System.out.println(pnb.rateOfInterest());
+                
+    }
+}
+
+abstract class BankAbstract{
+    
+    public abstract float rateOfInterest();
+}
+
+
+class HDFCBank extends BankAbstract
+{
+    @Override
+    public float rateOfInterest()
+    {
+        return 8;
+    }
+}
+
+class SBIBank extends BankAbstract
+{
+    @Override
+    public float rateOfInterest()
+    {
+        return 6;
+    }
+}
+
+class PNBBank extends BankAbstract
+{
+    @Override
+    public float rateOfInterest()
+    {
+        return 7;
+    }
+}
+
